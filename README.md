@@ -1,2 +1,2 @@
-# graphql-servers-stiching
-GraphQL servers playground for schemas stiching, and so on
+# graphql-servers-schema-stiching
+GraphQL servers playground for schemas stiching(Commercetools), and so on
