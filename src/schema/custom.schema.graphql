@@ -1,0 +1,9 @@
+type Query {
+  mmuCustomersQuery(id: String): Customer
+}
+
+type Customer {
+  id: String!
+  MMU_TEST: String
+  email: String
+}

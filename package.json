@@ -1,0 +1,37 @@
+{
+  "name": "commercetools-graohql-yoga-glue",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc",
+    "start:yoga": "yarn build && ts-node-dev --respawn src/server/yoga.ts",
+    "start:apollo": "yarn build && ts-node-dev --respawn src/server/apollo.ts",
+    "generate:types": "graphql-codegen --config ./codegen.yml"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^5.0.0",
+    "@graphql-codegen/typescript": "^4.0.1",
+    "@graphql-codegen/typescript-graphql-request": "^5.0.0",
+    "@graphql-codegen/typescript-operations": "^4.0.1",
+    "@graphql-codegen/typescript-resolvers": "^4.0.1",
+    "rimraf": "^5.0.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.1.6",
+    "dotenv": "^16.3.1"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.9.0",
+    "@commercetools/sdk-auth": "^4.0.1",
+    "@graphql-tools/delegate": "^10.0.1",
+    "@graphql-tools/graphql-file-loader": "^8.0.0",
+    "@graphql-tools/load": "^8.0.0",
+    "@graphql-tools/schema": "^10.0.0",
+    "@graphql-tools/stitch": "^9.0.1",
+    "@graphql-tools/wrap": "^10.0.0",
+    "agentkeepalive": "^4.3.0",
+    "graphql": "^16.7.1",
+    "graphql-yoga": "^4.0.3",
+    "node-fetch": "^2"
+  }
+}
